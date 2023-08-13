@@ -1,11 +1,13 @@
 #include "main.h"
 
-char *path(char *command)
+char *path_(char *command)
 {
-char *path, *path_cpy, *command_path, *delim = ":", *path_token;
+char *path, *path_cpy, *path_token;
 char *file_path;
-int command_length = 0, i, directory_length;
+struct stat buffer;
+int command_length = 0, directory_length;
 path = getenv("PATH");
+if (path){
 path_cpy = strdup(path);
 command_length = strlen(command);
 path_token = strtok(path_cpy, ":");
@@ -15,6 +17,22 @@ strcpy(file_path, path_token);
 strcat(file_path, "/");
 strcat(file_path, command);
 strcat(file_path, "\0");
-printf("%s", file_path);
+if (stat(file_path, &buffer) == 0)
+{
+free(path_cpy);
 return (file_path);
+}
+else
+{
+free (file_path);
+path_token = strtok(NULL, "/");
+}
+free(path_cpy);
+if (stat(command, &buffer) == 0)
+{
+    return (command);
+}
+return (NULL);
+}
+return (NULL);
 }
