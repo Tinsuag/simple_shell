@@ -10,5 +10,4 @@
 
 int get_line(void);
 char type_prompt(void);
-include shell(char *buf, size_t n);
 #endif 
