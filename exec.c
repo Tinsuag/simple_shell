@@ -2,11 +2,12 @@
 
 void execute(char **argv)
 {
-char *path = "/usr/bin/";
+char *command = NULL;
 
 if (argv)
 {
-if (execve(path, argv, NULL) == (-1))
+command = argv[0];
+if (execve(command, argv, NULL) == (-1))
 {
 perror("Error:");
 }
