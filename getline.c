@@ -13,7 +13,7 @@ char *portion = NULL;
 
 while (1)
 {
-printf("#cisfun$ ");
+printf(":) ");
 nchar = getline(&lineptr, &n, stdin);
 if (nchar == -1)
 {
