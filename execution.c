@@ -10,7 +10,7 @@ void execArgs(char **parsed)
 
 	if (pid == -1)
 	{
-		printf(*\nFailed forking child..");
+		printf("\nFailed forking child..");
 		return;
 	}
 	else if (pid == 0)
@@ -23,7 +23,7 @@ void execArgs(char **parsed)
 	}
 	else 
 	{
-		wait(null);
+		wait(NULL);
 		return;
 	}
 }
