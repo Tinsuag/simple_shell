@@ -3,7 +3,7 @@
 void parseSpace(char *str, char **parsed)
 {
 	int i;
-	for (i = 0; i < MAXLITST; i++)
+	for (i = 0; i < MAXLIST; i++)
 	{
 		parsed[i] = strsep(&str, " ");
 		if (parsed[i] == NULL)

@@ -11,13 +11,14 @@ int main(void)
 	{
 		printDir();
 		if (takeInput(inputString))
-			continue;
+		{
+				continue;
+		}
 		execFlag = processString(inputString, parsedArgs, parsedArgsPiped);
 		if (execFlag == 1)
 			execArgs(parsedArgs);
-		if execFlag == 2)
+		if (execFlag == 2)
 			execArgsPiped(parsedArgs, parsedArgsPiped);
 	}
 	return (0);
-	}
 }

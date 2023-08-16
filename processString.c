@@ -1,4 +1,4 @@
-#inlcude "main.h"
+#include "main.h"
 
 int processString(char *str, char **parsed, char **parsedpipe)
 {

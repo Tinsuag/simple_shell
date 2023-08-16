@@ -30,6 +30,4 @@ int parsePipe(char *str, char **strPiped);
 void parseSpace(char * str, char **parsed);
 int processString(char *str, char **parsed, char **parsedpipe);
 
-char *_getline(char *lineptr, size_t n);
-char *path_(char *command);
 #endif /*MAIN_H*/

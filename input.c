@@ -4,7 +4,7 @@ int takeInput(char *str)
 {
 	char *buf;
 
-	butf = readline("\n$ ");
+	buf = readline("\n$ ");
 	if (strlen(buf) != 0)
 	{
 		add_history(buf);
